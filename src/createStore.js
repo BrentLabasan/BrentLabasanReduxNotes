@@ -1,4 +1,4 @@
-import isPlainObject from 'lodash/isPlainObject' //BVL https://lodash.com/docs/4.17.11#isPlainObject https://stackoverflow.com/questions/52453407/the-different-between-object-and-plain-object-in-javascript
+import isPlainObject from 'lodash/isPlainObject'
 
 /**
  * These are private action types reserved by Redux.
