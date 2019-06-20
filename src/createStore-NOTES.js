@@ -36,13 +36,13 @@ export var ActionTypes = { //BVL todo
  * and subscribe to changes.
  */
 export default function createStore(reducer, initialState, enhancer) {
-  if (typeof initialState === 'function' && typeof enhancer === 'undefined') {
-    enhancer = initialState
-    initialState = undefined
+  if (typeof initialState === 'function' && typeof enhancer === 'undefined') { //BVL todo
+    enhancer = initialState //BVL todo
+    initialState = undefined //BVL todo
   }
 
-  if (typeof enhancer !== 'undefined') {
-    if (typeof enhancer !== 'function') {
+  if (typeof enhancer !== 'undefined') { //BVL todo
+    if (typeof enhancer !== 'function') { //BVL todo
       throw new Error('Expected the enhancer to be a function.')
     }
 
