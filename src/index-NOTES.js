@@ -1,9 +1,9 @@
-import createStore from './createStore'
+import createStore from './createStore' //BVL These imports are from every other file in this folder
 import combineReducers from './combineReducers'
 import bindActionCreators from './bindActionCreators'
 import applyMiddleware from './applyMiddleware'
 import compose from './compose'
-import warning from './utils/warning'
+import warning from './utils/warning' //BVL This import is from the only file in the only folder in this folder.
 
 /*
 * This is a dummy function to check if the function name has been altered by minification.
@@ -14,7 +14,7 @@ function isCrushed() {}
 if (
   process.env.NODE_ENV !== 'production' &&
   typeof isCrushed.name === 'string' &&
-  isCrushed.name !== 'isCrushed'
+  isCrushed.name !== 'isCrushed' //BVL if minification occured this line would become e.g. a.name !== 'isCrushed'
 ) {
   warning(
     'You are currently using minified code outside of NODE_ENV === \'production\'. ' +
