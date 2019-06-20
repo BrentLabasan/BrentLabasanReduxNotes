@@ -16,7 +16,7 @@ export default function compose(...funcs) {
     }
 
     const last = funcs[funcs.length - 1]
-    const rest = funcs.slice(0, -1)
+    const rest = funcs.slice(0, -1) // A negative index can be used, indicating an offset from the end of the sequence. slice(2,-1) extracts the third element through the second-to-last element in the sequence.
 
     return rest.reduceRight((composed, f) => f(composed), last(...args))
   }
