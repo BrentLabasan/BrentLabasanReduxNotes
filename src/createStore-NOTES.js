@@ -10,28 +10,28 @@ export var ActionTypes = { //BVL todo
   INIT: '@@redux/INIT'
 }
 
-/**
+/** //BVL todo
  * Creates a Redux store that holds the state tree.
  * The only way to change the data in the store is to call `dispatch()` on it.
- *
+ * //BVL todo
  * There should only be a single store in your app. To specify how different
  * parts of the state tree respond to actions, you may combine several reducers
  * into a single reducer function by using `combineReducers`.
- *
+ * //BVL todo
  * @param {Function} reducer A function that returns the next state tree, given
  * the current state tree and the action to handle.
- *
+ * //BVL todo
  * @param {any} [initialState] The initial state. You may optionally specify it
  * to hydrate the state from the server in universal apps, or to restore a
  * previously serialized user session.
  * If you use `combineReducers` to produce the root reducer function, this must be
  * an object with the same shape as `combineReducers` keys.
- *
+ * //BVL todo
  * @param {Function} enhancer The store enhancer. You may optionally specify it
  * to enhance the store with third-party capabilities such as middleware,
  * time travel, persistence, etc. The only store enhancer that ships with Redux
  * is `applyMiddleware()`.
- *
+ * //BVL todo
  * @returns {Store} A Redux store that lets you read the state, dispatch actions
  * and subscribe to changes.
  */
