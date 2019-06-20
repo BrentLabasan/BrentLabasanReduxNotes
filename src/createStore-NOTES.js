@@ -46,26 +46,26 @@ export default function createStore(reducer, initialState, enhancer) {
       throw new Error('Expected the enhancer to be a function.')
     }
 
-    return enhancer(createStore)(reducer, initialState)
+    return enhancer(createStore)(reducer, initialState) //BVL todo OK this is getting complicated
   }
 
   if (typeof reducer !== 'function') {
     throw new Error('Expected the reducer to be a function.')
   }
-
+  //BVL todo
   var currentReducer = reducer
   var currentState = initialState
   var currentListeners = []
   var nextListeners = currentListeners
   var isDispatching = false
-
+  //BVL todo
   function ensureCanMutateNextListeners() {
     if (nextListeners === currentListeners) {
       nextListeners = currentListeners.slice()
     }
   }
 
-  /**
+  /** //BVL todo
    * Reads the state tree managed by the store.
    *
    * @returns {any} The current state tree of your application.
