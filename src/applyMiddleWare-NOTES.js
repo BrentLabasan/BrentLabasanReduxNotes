@@ -1,6 +1,6 @@
 import compose from './compose'
 
-/**
+/** //BVL todo I need to be better able visualize how the dispatch method works
  * Creates a store enhancer that applies middleware to the dispatch method
  * of the Redux store. This is handy for a variety of tasks, such as expressing
  * asynchronous actions in a concise manner, or logging every action payload.
@@ -16,7 +16,7 @@ import compose from './compose'
  * @param {...Function} middlewares The middleware chain to be applied.
  * @returns {Function} A store enhancer applying the middleware.
  */
-export default function applyMiddleware(...middlewares) {
+export default function applyMiddleware(...middlewares) { //BVL todo yeah I am confused
   return (createStore) => (reducer, initialState, enhancer) => {
     var store = createStore(reducer, initialState, enhancer)
     var dispatch = store.dispatch
