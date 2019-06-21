@@ -74,7 +74,7 @@ export default function createStore(reducer, initialState, enhancer) {
     return currentState
   }
 
-  /**
+  /** //BVL todo wuttt
    * Adds a change listener. It will be called any time an action is dispatched,
    * and some part of the state tree may potentially have changed. You may then
    * call `getState()` to read the current state tree inside the callback.
@@ -97,7 +97,7 @@ export default function createStore(reducer, initialState, enhancer) {
    * @param {Function} listener A callback to be invoked on every dispatch.
    * @returns {Function} A function to remove this change listener.
    */
-  function subscribe(listener) {
+  function subscribe(listener) { //BVL todo
     if (typeof listener !== 'function') {
       throw new Error('Expected listener to be a function.')
     }
@@ -120,7 +120,7 @@ export default function createStore(reducer, initialState, enhancer) {
     }
   }
 
-  /**
+  /** //BVL todo wuttt
    * Dispatches an action. It is the only way to trigger a state change.
    *
    * The `reducer` function, used to create the store, will be called with the
@@ -145,7 +145,7 @@ export default function createStore(reducer, initialState, enhancer) {
    * Note that, if you use a custom middleware, it may wrap `dispatch()` to
    * return something else (for example, a Promise you can await).
    */
-  function dispatch(action) {
+  function dispatch(action) { //BVL todo
     if (!isPlainObject(action)) {
       throw new Error(
         'Actions must be plain objects. ' +
@@ -179,7 +179,7 @@ export default function createStore(reducer, initialState, enhancer) {
     return action
   }
 
-  /**
+  /** //BVL todo
    * Replaces the reducer currently used by the store to calculate the state.
    *
    * You might need this if your app implements code splitting and you want to
