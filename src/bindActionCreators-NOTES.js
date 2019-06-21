@@ -1,8 +1,8 @@
-function bindActionCreator(actionCreator, dispatch) {
-  return (...args) => dispatch(actionCreator(...args))
+function bindActionCreator(actionCreator, dispatch) { //BVL todo
+  return (...args) => dispatch(actionCreator(...args)) // //BVL uhhhh isn't actionCreator an arg itself?
 }
 
-/**
+/** //BVL todo
  * Turns an object whose values are action creators, into an object with the
  * same keys, but with every function wrapped into a `dispatch` call so they
  * may be invoked directly. This is just a convenience method, as you can call
@@ -23,7 +23,7 @@ function bindActionCreator(actionCreator, dispatch) {
  * function as `actionCreators`, the return value will also be a single
  * function.
  */
-export default function bindActionCreators(actionCreators, dispatch) {
+export default function bindActionCreators(actionCreators, dispatch) { //BVL makes enough sense
   if (typeof actionCreators === 'function') {
     return bindActionCreator(actionCreators, dispatch)
   }
